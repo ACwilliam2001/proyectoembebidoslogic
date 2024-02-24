@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Consumo de Energía</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-section">
+      <h2>Consumo de energía por mes</h2>
+      <img src="consumomes.jpeg" alt="Consumo de energía por mes">
+    </div>
+
+    <div class="dashboard-section">
+        <h2>Histograma de consumo de kWh</h2>
+        <select id="meses">
+          <option value="enero">Enero</option>
+          <option value="febrero">Febrero</option>
+          <option value="marzo">Marzo</option>
+          <option value="abril">Abril</option>
+          <option value="mayo">Mayo</option>
+          <option value="junio">Junio</option>
+          <option value="julio">Julio</option>
+          <option value="agosto">Agosto</option>
+          <option value="septiembre">Septiembre</option>
+          <option value="octubre">Octubre</option>
+          
+          <!-- Agrega opciones para los demás meses -->
+        </select>
+        <img id="histograma-img" src="hcenero.jpeg" alt="Histograma de consumo de kWh">
+      </div>
+    
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const selectMeses = document.getElementById("meses");
+          const imagenHistograma = document.getElementById("histograma-img");
+      
+          selectMeses.addEventListener("change", function() {
+            const mesSeleccionado = selectMeses.value;
+            const rutaImagen = "hc" + mesSeleccionado + ".jpeg";
+            imagenHistograma.src = rutaImagen;
+          });
+        });
+      </script>
+      
+
+    <!-- Repite la misma estructura para las otras secciones -->
+  </div>
+
+  <!-- siguiente dashhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+
+  <div class="dashboard-container">
+    <div class="dashboard-section">
+      <h2>Consumo de energia (Picos inusuales)</h2>
+      <img src="picoinusual.jpeg" alt="">
+    </div>
+
+    <div class="dashboard-section">
+        <h2>Histograma de anomalias de kWh</h2>
+        <select id="mese">
+          <option value="enero">Enero</option>
+          <option value="febrero">Febrero</option>
+          <option value="marzo">Marzo</option>
+          <option value="abril">Abril</option>
+          <option value="mayo">Mayo</option>
+          <option value="junio">Junio</option>
+          <option value="julio">Julio</option>
+          <option value="agosto">Agosto</option>
+          <option value="septiembre">Septiembre</option>
+          <option value="octubre">Octubre</option>
+          <!-- Agrega opciones para los demás meses -->
+        </select>
+        <img id="anomalia-img" src="haenero.jpeg" alt="">
+      </div>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const selectMeses = document.getElementById("mese");
+          const imagenanomalia = document.getElementById("anomalia-img");
+      
+          selectMeses.addEventListener("change", function() {
+            const mesSeleccionado = selectMeses.value;
+            const rutaImagen = "ha" + mesSeleccionado + ".jpeg";
+            imagenanomalia.src = rutaImagen;
+          });
+        });
+      </script>
+      
+    
+
+    <!-- Repite la misma estructura para las otras secciones -->
+
+  </div>
+
+
+   <!-- siguiente dashhhhhhhhhhhhhhhhhhhhhhhhhhhh SOLO IMAGENES -->
+  <div class="dashboard-container">
+    <div class="dashboard-section">
+      <h2>Histograma de Deudas Pendientes</h2>
+      <img src="histodeudapen.jpeg" alt="">
+    </div>
+
+    <div class="dashboard-section">
+        <h2>Histograma de Facturas Pendientes</h2>
+        <img src="histofacturapen.jpeg" alt="">
+      </div>
+    
+
+    <!-- Repite la misma estructura para las otras secciones -->
+
+  </div>
+
+  <div class="dashboard-container">
+    <div class="dashboard-section">
+      <h2>Matriz de Correlación</h2>
+      <img src="matriz.jpeg" alt="">
+    </div>
+
+    <!-- Repite la misma estructura para las otras secciones -->
+
+    <div class="dashboard-section">
+        <h2>Clustering de Consumo de Energía</h2>
+        <button id="aleatorio">Aleatorio</button>
+        <img id="clustering-img" src="clus1.jpeg" alt="">
+      </div>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const botonAleatorio = document.getElementById("aleatorio");
+          const cluster = document.getElementById("clustering-img");
+      
+          botonAleatorio.addEventListener("click", function() {
+            // Lista de rutas de imágenes aleatorias
+            const imagenesAleatorias = [
+              "clus1.jpeg",
+              "clus2.jpeg",
+              "clus3.jpeg",
+              "clus4.jpeg",
+              "clus5.jpeg",
+              // Agrega aquí más rutas de imágenes aleatorias según sea necesario
+            ];
+      
+            // Obtener un índice aleatorio dentro del rango de la lista de imágenes
+            const indiceAleatorio = Math.floor(Math.random() * imagenesAleatorias.length);
+            // Obtener la ruta de imagen aleatoria correspondiente al índice
+            const rutaImagenAleatoria = imagenesAleatorias[indiceAleatorio];
+            // Establecer la nueva imagen
+            cluster.src = rutaImagenAleatoria;
+          });
+        });
+      </script>
+      
+    
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="scripts.js"></script>
+</body>
+</html>
